@@ -1,0 +1,2 @@
+TITLE                   :STAMPS
+VERSION                 :v1.0

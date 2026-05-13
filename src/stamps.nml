@@ -1,0 +1,80 @@
+grf {
+    grfid: "OM\01\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC);
+    url: string(STR_GRF_URL);
+    version: 0;
+    min_compatible_version: 0;
+}
+
+// USPS ----------------------------------------------------------------------------------------------------
+// Grumman LLV --------------------------------------------------
+
+// GRAPHICS
+spriteset(spriteset_usps_llv_closed, "gfx/usps/llv/usps_llv.png") {
+    // left_x, upper_y, width, height, offset_x, offset_y
+    [  0,      0,       11,    18,     -5,       -9     ]
+    [  16,     0,       20,    16,     -10,      -7     ]
+    [  41,     0,       20,    14,     -10,      -8     ]
+    [  66,     0,       19,    16,     -10,      -9     ]
+    [  90,     0,       11,    18,     -5,       -9     ]
+    [  106,    0,       19,    16,     -10,      -8     ]
+    [  130,    0,       20,    14,     -14,      -6     ]
+    [  155,    0,       20,    16,     -10,      -8     ]
+}
+
+spriteset(spriteset_usps_llv_open, "gfx/usps/llv/usps_llv.png") {
+    // left_x, upper_y, width, height, offset_x, offset_y
+    [  0,      23,       11,    18,     -5,       -9    ]
+    [  16,     23,       20,    16,     -10,      -7    ]
+    [  41,     23,       20,    14,     -10,      -8    ]
+    [  66,     23,       19,    16,     -10,      -9    ]
+    [  90,     0,        11,    18,     -5,       -9    ]
+    [  106,    23,       19,    16,     -10,      -8    ]
+    [  130,    23,       20,    14,     -14,      -6    ]
+    [  155,    23,       20,    16,     -10,      -8    ]
+
+}
+
+spritegroup spritegroup_usps_llv {
+    loaded: [spriteset_usps_llv_closed];
+    loading: [spriteset_usps_llv_open];
+}
+
+// ITEM
+item(FEAT_ROADVEHS, item_usps_llv) {
+    property {
+        // Common properties
+        name:                           string(STR_NAME_USPS_LLV);
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1986,01,01);
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        sound_effect:                   SOUND_BUS_START_PULL_AWAY_WITH_HORN ;
+
+        // Specs
+        speed:                          60 mph;
+        power:                          110 hp;
+        weight:                         1225 kg;
+
+        // Model
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        retire_early:                   0;
+        vehicle_life:                   24;
+        reliability_decay:              50;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_MAIL);
+        cargo_capacity:                 30;
+        loading_speed:                  5;
+
+        // Cost
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        cost_factor:                    70;
+        running_cost_factor:            100;
+    }
+
+    // Graphics
+    graphics {
+        default: spritegroup_usps_llv;
+    }
+}

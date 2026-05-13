@@ -1,0 +1,9 @@
+##grflangid 0x00
+
+# meta
+STR_GRF_NAME                                                                :{TITLE} {VERSION}
+STR_GRF_DESC                                                                :STAMPS Thoroughly Adds Mail and Postal Stuff
+STR_GRF_URL                                                                 :https://orchid.moe/projects/stamps
+
+# vehicle names
+STR_NAME_USPS_LLV                                                           :USPS - Grumman LLV
