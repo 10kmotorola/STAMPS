@@ -25,14 +25,14 @@ spriteset(spriteset_usps_llv_closed, "gfx/usps/llv/usps_llv.png") {
 
 spriteset(spriteset_usps_llv_open, "gfx/usps/llv/usps_llv.png") {
     // left_x, upper_y, width, height, offset_x, offset_y
-    [  0,      23,       11,    18,     -5,       -9    ] // 1
-    [  16,     23,       20,    16,     -13,      -6    ] // 2
-    [  41,     23,       20,    14,     -10,      -8    ] // 3
-    [  66,     23,       19,    16,     -6,       -7    ] // 4
-    [  90,     0,        11,    18,     -5,       -9    ] // 5
-    [  106,    23,       19,    16,     -13,      -7    ] // 6
-    [  130,    23,       20,    14,     -14,      -6    ] // 7
-    [  155,    23,       20,    16,     -6,       -7    ] // 8
+    [  0,      23,      11,    18,     -5,       -9     ] // 1
+    [  16,     23,      20,    16,     -13,      -6     ] // 2
+    [  41,     23,      20,    14,     -10,      -8     ] // 3
+    [  66,     23,      19,    16,     -6,       -7     ] // 4
+    [  90,     0,       11,    18,     -5,       -9     ] // 5
+    [  106,    23,      19,    16,     -13,      -7     ] // 6
+    [  130,    23,      20,    14,     -14,      -6     ] // 7
+    [  155,    23,      20,    16,     -6,       -7     ] // 8
 
 }
 
@@ -49,7 +49,7 @@ item(FEAT_ROADVEHS, item_usps_llv) {
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1986,01,01);
         sprite_id:                      SPRITE_ID_NEW_ROADVEH;
-        sound_effect:                   SOUND_BUS_START_PULL_AWAY_WITH_HORN ;
+        sound_effect:                   SOUND_BUS_START_PULL_AWAY_WITH_HORN;
 
         // SPECS
         speed:                          60 mph;

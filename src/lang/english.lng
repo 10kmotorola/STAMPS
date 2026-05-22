@@ -6,4 +6,6 @@ STR_GRF_DESC                                                                :STA
 STR_GRF_URL                                                                 :https://orchid.moe/projects/stamps
 
 # vehicle names
-STR_NAME_USPS_LLV                                                           :USPS - Grumman LLV
+# USPS
+STR_NAME_USPS_MAILSTER                                                      :Cushman Mailster
+STR_NAME_USPS_LLV                                                           :Grumman LLV
