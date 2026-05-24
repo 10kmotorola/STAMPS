@@ -33,7 +33,11 @@ spriteset(spriteset_usps_llv_open, "gfx/usps/llv/usps_llv.png") {
     [  106,    23,      19,    16,     -13,      -7     ] // 6
     [  130,    23,      20,    14,     -14,      -6     ] // 7
     [  155,    23,      20,    16,     -6,       -7     ] // 8
+}
 
+spriteset(spriteset_usps_llv_purchase, "gfx/usps/llv/usps_llv.png") {
+    // left_x, upper_y, width, height, offset_x, offset_y
+    [  130,    0,       20,    14,     -14,      -6     ] // 7
 }
 
 spritegroup spritegroup_usps_llv {
@@ -70,11 +74,12 @@ item(FEAT_ROADVEHS, item_usps_llv) {
         // COST
         running_cost_base:              RUNNING_COST_ROADVEH;
         cost_factor:                    70;
-        running_cost_factor:            65;
+        running_cost_factor:            55;
     }
 
     // GRAPHICS
     graphics {
+        purchase: spriteset_usps_llv_purchase;
         default: spritegroup_usps_llv;
     }
 }
